@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Glocksy1</title>
-  <meta name="description" content="Портфолио / проекты / что угодно" />
+  <title>GlocksyHub</title>
+  <meta name="description" content="Портфолио / проекты / разработки" />
   <style>
     :root{
       --accent:#7c5cff;
@@ -22,8 +22,6 @@
     .wrap{max-width:980px;margin:36px auto;padding:24px;animation:fadeIn 1.2s ease-in}
     header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:30px}
     .logo{font-weight:700;letter-spacing:0.6px;font-size:24px;color:var(--accent);animation:glow 2s ease-in-out infinite alternate}
-    nav a{color:var(--muted);text-decoration:none;margin-left:14px;transition:color 0.3s}
-    nav a:hover{color:var(--accent)}
     .hero{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
     .card{
       background:rgba(255,255,255,0.03);
@@ -36,21 +34,20 @@
     p.lead{color:var(--muted);margin:0 0 16px}
     .btn{
       display:inline-block;
-      padding:10px 14px;
+      padding:10px 16px;
       border-radius:10px;
       background:var(--accent);
       color:#fff;
       text-decoration:none;
       font-weight:600;
       transition:transform 0.2s,box-shadow 0.2s;
+      margin:4px;
     }
     .btn:hover{
       transform:translateY(-3px);
       box-shadow:0 0 10px var(--accent);
     }
     footer{color:var(--muted);text-align:center;margin-top:30px;font-size:13px;animation:fadeIn 2s ease-in}
-    footer a{color:var(--accent);text-decoration:none;margin:0 6px;transition:color 0.3s}
-    footer a:hover{color:#fff}
     @media(max-width:880px){.hero{grid-template-columns:1fr;}.wrap{padding:14px}}
     @keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
     @keyframes slideUp{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
@@ -60,14 +57,14 @@
 <body>
   <div class="wrap">
     <header>
-      <div class="logo">Glocksy1</div>
+      <div class="logo">GlocksyHub</div>
     </header>
 
     <main class="hero">
       <section>
         <div class="card">
-          <h1>Glocksy1</h1>
-          <p class="lead">Портфолио / проекты / что угодно</p>
+          <h1>GlocksyHub</h1>
+          <p class="lead">Портфолио, проекты и полезные разработки.</p>
         </div>
       </section>
 
@@ -82,12 +79,9 @@
     </main>
 
     <footer>
-      <p>
-        <a href="https://t.me/bibizankajs" target="_blank">Telegram</a> |
-        <a href="https://guns.lol/gloksy" target="_blank">guns.lol</a> |
-        <a href="https://github.com/glocksy1" target="_blank">GitHub</a>
-      </p>
-      <p>© <span id="year"></span> Glocksy1</p>
+      <a class="btn" href="https://t.me/bibizankajs" target="_blank">Telegram</a>
+      <a class="btn" href="https://guns.lol/gloksy" target="_blank">guns.lol</a>
+      <p style="margin-top:10px;">© <span id="year"></span> GlocksyHub</p>
     </footer>
   </div>
 
