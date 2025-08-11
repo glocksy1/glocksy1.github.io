@@ -3,65 +3,92 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title></title>
-  <meta name="description" content="Крутой сайт Бро. Портфолио / лендинг." />
+  <title>Glocksy1</title>
+  <meta name="description" content="Портфолио / проекты / что угодно" />
   <style>
-    :root{--accent:#7c5cff;--bg:#0f0f14;--muted:#bfc3d6}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,#0b0b0f,#111219);color:#eef;line-height:1.4}
-    .wrap{max-width:980px;margin:36px auto;padding:24px}
-    header{display:flex;justify-content:space-between;align-items:center;gap:12px}
-    .logo{font-weight:700;letter-spacing:0.6px}
-    nav a{color:var(--muted);text-decoration:none;margin-left:14px}
-    .hero{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:28px;align-items:center}
-    .card{background:rgba(255,255,255,0.03);padding:18px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,0.6)}
-    h1{margin:0 0 8px 0;font-size:28px}
+    :root{
+      --accent:#7c5cff;
+      --bg:#0f0f14;
+      --muted:#bfc3d6;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Inter,system-ui,Arial;
+      background:linear-gradient(180deg,#0b0b0f,#111219);
+      color:#eef;
+      line-height:1.4;
+      overflow-x:hidden;
+    }
+    .wrap{max-width:980px;margin:36px auto;padding:24px;animation:fadeIn 1.2s ease-in}
+    header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:30px}
+    .logo{font-weight:700;letter-spacing:0.6px;font-size:24px;color:var(--accent);animation:glow 2s ease-in-out infinite alternate}
+    nav a{color:var(--muted);text-decoration:none;margin-left:14px;transition:color 0.3s}
+    nav a:hover{color:var(--accent)}
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
+    .card{
+      background:rgba(255,255,255,0.03);
+      padding:18px;
+      border-radius:14px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.6);
+      animation:slideUp 1s ease-out;
+    }
+    h1{margin:0 0 8px;font-size:28px}
     p.lead{color:var(--muted);margin:0 0 16px}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
-    .social{display:flex;gap:8px;margin-top:10px}
-    footer{color:var(--muted);text-align:center;margin-top:30px;font-size:13px}
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      transition:transform 0.2s,box-shadow 0.2s;
+    }
+    .btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 0 10px var(--accent);
+    }
+    footer{color:var(--muted);text-align:center;margin-top:30px;font-size:13px;animation:fadeIn 2s ease-in}
+    footer a{color:var(--accent);text-decoration:none;margin:0 6px;transition:color 0.3s}
+    footer a:hover{color:#fff}
     @media(max-width:880px){.hero{grid-template-columns:1fr;}.wrap{padding:14px}}
+    @keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+    @keyframes slideUp{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
+    @keyframes glow{0%{text-shadow:0 0 5px var(--accent)}100%{text-shadow:0 0 20px var(--accent)}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="logo">БроSite</div>
-      <nav>
-        <a href="#about">Обо мне</a>
-        <a href="#work">Работы</a>
-        <a href="#contact">Контакты</a>
-      </nav>
+      <div class="logo">Glocksy1</div>
     </header>
 
     <main class="hero">
       <section>
         <div class="card">
-          <p class="lead">Портфолио / проекты / что угодно.</p>
-          <a class="btn" href="#contact">Написать мне</a>
-          <div class="social">
-            <a href="#" style="color:var(--muted);text-decoration:none">DISCORD- bibizankajs</a>
-          </div>
+          <h1>Glocksy1</h1>
+          <p class="lead">Портфолио / проекты / что угодно</p>
         </div>
       </section>
 
       <aside class="card">
-        <h3 id="about">О сайте</h3>
-        <p style="color:var(--muted)">Этот сайт — тестовый, но скоро тут будет пачка проектов.</p>
-        <h4 id="work">Работы</h4>
+        <h3>Работы</h3>
         <ul style="color:var(--muted);padding-left:18px">
           <li>Проект 1 — лендинг</li>
           <li>Проект 2 — мод для игры</li>
           <li>Проект 3 — скрипт</li>
         </ul>
-        <div id="contact" style="margin-top:10px">
-          <strong>Пиши:</strong><br/>
-          <small style="color:var(--muted)">@bibizankajs</small>
-        </div>
       </aside>
     </main>
 
-    <footer class="footer">© <span id="year"></span> Этот сайт — Сделан с кофе и багфиксами:D</footer>
+    <footer>
+      <p>
+        <a href="https://t.me/bibizankajs" target="_blank">Telegram</a> |
+        <a href="https://guns.lol/gloksy" target="_blank">guns.lol</a> |
+        <a href="https://github.com/glocksy1" target="_blank">GitHub</a>
+      </p>
+      <p>© <span id="year"></span> Glocksy1</p>
+    </footer>
   </div>
 
   <script>
@@ -69,4 +96,3 @@
   </script>
 </body>
 </html>
-
